@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.5.31)  31 MAY 2025 19:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.5.31)  31 MAY 2025 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1014,12 +1014,12 @@ Package biblatex Info: ... file 'Seguridad.bbl' found.
 (./Seguridad.bbl)
 Package biblatex Info: Reference section=0 on input line 12.
 Package biblatex Info: Reference segment=0 on input line 12.
-
-
-[1
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
-dvips/cm-super/cm-super-t1.enc}] (./Seguridad.aux
+dvips/cm-super/cm-super-t1.enc}]
+
+[2] (./Seguridad.aux
 LaTeX Info: Redefining \sptext on input line 15.
 LaTeX Info: Redefining \. on input line 15.
 LaTeX Info: Redefining \% on input line 15.
@@ -1035,21 +1035,21 @@ Package logreq Info: Writing requests to 'Seguridad.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29370 strings out of 475002
- 563941 string characters out of 5762004
- 1456529 words of memory out of 5000000
+ 29374 strings out of 475002
+ 563977 string characters out of 5762004
+ 1466529 words of memory out of 5000000
  51997 multiletter control sequences out of 15000+600000
  564454 words of font info for 44 fonts, out of 8000000 for 9000
  107 hyphenation exceptions out of 8191
- 117i,5n,121p,698b,2813s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,6n,121p,990b,2813s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/
 fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on Seguridad.pdf (1 page, 89128 bytes).
+Output written on Seguridad.pdf (2 pages, 96966 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
+ 62 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
