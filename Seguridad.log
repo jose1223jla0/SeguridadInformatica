@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.5.31)  31 MAY 2025 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.5.31)  31 MAY 2025 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,7 +1019,9 @@ Package biblatex Info: Reference segment=0 on input line 12.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/cm-super/cm-super-t1.enc}]
 
-[2] (./Seguridad.aux
+[2]
+
+[3] (./Seguridad.aux
 LaTeX Info: Redefining \sptext on input line 15.
 LaTeX Info: Redefining \. on input line 15.
 LaTeX Info: Redefining \% on input line 15.
@@ -1030,13 +1032,18 @@ L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Seguridad.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'Seguridad.run.xml'.
 \openout1 = `Seguridad.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29374 strings out of 475002
- 563977 string characters out of 5762004
+ 29376 strings out of 475002
+ 563993 string characters out of 5762004
  1466529 words of memory out of 5000000
  51997 multiletter control sequences out of 15000+600000
  564454 words of font info for 44 fonts, out of 8000000 for 9000
@@ -1046,10 +1053,10 @@ Here is how much of TeX's memory you used:
 fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on Seguridad.pdf (2 pages, 96966 bytes).
+Output written on Seguridad.pdf (3 pages, 100215 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 67 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
