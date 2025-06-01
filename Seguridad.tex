@@ -1,0 +1,62 @@
+\documentclass[spanish,12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{orcidlink}
+\usepackage{multicol}
+\usepackage[backend=biber,style=apa]{biblatex}
+\addbibresource{referencias.bib}
+
+\begin{document}
+	
+	%=====================================================================
+	%			TÍTULO Y AUTORES FUERA DE COLUMNA
+	%=====================================================================
+	\begin{flushright}
+		{\LARGE \textbf{La Importancia del Cifrado de extremo a extremo en las comunicaciones digitales hoy en día}}\\[1em]
+		
+		\textbf{Andrade Oscco, Jose Luis}~\orcidlink{0009-0002-6601-1995} \\
+		\href{mailto:1009820212@unajma.edu.pe}{1009820212@unajma.edu.pe} \\[0.5em]
+		
+		\textbf{Lizana Quispe, Miguel Angel}~\orcidlink{0000-0003-2345-6789} \\
+		\href{mailto:mlizana@uni.edu.pe}{mlizana@uni.edu.pe} \\[0.5em]
+		
+		\textbf{Rojas Merino, Alfredo}~\orcidlink{0000-0003-2345-6789} \\
+		\href{mailto:arojas@uni.edu.pe}{arojas@uni.edu.pe} \\[0.5em]
+		
+		Facultad de Ingeniería, Universidad Nacional José María Arguedas, Andahuaylas, Perú \\
+		\today
+	\end{flushright}
+	
+	\vspace{2em} 
+	
+	%=====================================================================
+	%			% INICIO DE CONTENIDO EN DOS COLUMNAS
+	%=====================================================================
+	
+
+	\begin{multicols}{2}
+		
+		%=====================================================================
+		%			% FORMAS DE CITAR  OJO REGISTRAR AL AUTOR EN rreferencias.bib
+		%=====================================================================
+		
+		\section*{Sumario}
+		Este artículo analiza la importancia del cifrado de extremo a extremo en comunicaciones digitales...
+		
+		Según \parencite{perez2020}, la investigación cualitativa ofrece una comprensión profunda de los fenómenos sociales.
+		
+		\section*{Resumen}
+
+	\end{multicols}
+	
+	%=====================================================================
+			% FIN DE CONTENIDO EN DOS COLUMNAS
+	%=====================================================================
+	
+	
+	\printbibliography
+	
+\end{document}
