@@ -9,6 +9,30 @@
 \usepackage{multicol}
 \usepackage[backend=biber,style=apa]{biblatex}
 \addbibresource{referencias.bib}
+\usepackage{tabularx}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+
+\tikzstyle{box} = [rectangle, rounded corners, minimum width=8cm, minimum height=1cm,text centered, draw=black, fill=blue!20]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+
+\tikzset{
+	box/.style={
+		rectangle, rounded corners, minimum width=5.5cm, minimum height=1cm,
+		text centered, draw=black, fill=blue!20
+	},
+	smallbox/.style={
+		rectangle, rounded corners, minimum width=4cm, minimum height=0.7cm,
+		text centered, draw=black, fill=red!20
+	},
+	arrow/.style={
+		thick,->,>=stealth
+	}
+}
 
 \begin{document}
 	
@@ -18,14 +42,15 @@
 	\begin{flushright}
 		{\LARGE \textbf{La Importancia del Cifrado de extremo a extremo en las comunicaciones digitales hoy en día}}\\[1em]
 		
-		\textbf{Andrade Oscco, Jose Luis}~\orcidlink{0009-0002-6601-1995} \\
-		\href{mailto:1009820212@unajma.edu.pe}{1009820212@unajma.edu.pe} \\[0.5em]
+		$^{1} $\textbf{José Luis Andrade Oscco}~\orcidlink{0009-0002-6601-1995} \\
+		Correo electrónico: \href{mailto:1009820212@unajma.edu.pe}{\texttt{1009820212@unajma.edu.pe}} \\[0.5em]
+	
+		$^{2} $\textbf{Miguel Ángel Lizana Quispe}~\orcidlink{0000-0003-2345-6789} \\
+		Correo electrónico: \href{mailto:mlizana@uni.edu.pe}{\texttt{mlizana@uni.edu.pe}} \\[0.5em]
 		
-		\textbf{Lizana Quispe, Miguel Angel}~\orcidlink{0000-0003-2345-6789} \\
-		\href{mailto:mlizana@uni.edu.pe}{mlizana@uni.edu.pe} \\[0.5em]
+		$^{3} $\textbf{Alfredo Rojas Merino}~\orcidlink{0000-0003-2345-6789} \\
+		Correo electrónico: \href{mailto:arojas@uni.edu.pe}{\texttt{arojas@uni.edu.pe}} \\[0.5em]
 		
-		\textbf{Rojas Merino, Alfredo}~\orcidlink{0000-0003-2345-6789} \\
-		\href{mailto:arojas@uni.edu.pe}{arojas@uni.edu.pe} \\[0.5em]
 		
 		Facultad de Ingeniería, Universidad Nacional José María Arguedas, Andahuaylas, Perú \\
 		\today
@@ -76,32 +101,101 @@
 		Este trabajo tiene como propósito principal realizar una revisión referencial sobre la importancia del cifrado de extremo a extremo en las comunicaciones digitales contemporáneas. Para ello, se propone analizar sus fundamentos técnicos, sus principales aplicaciones prácticas, y su papel en la protección de la privacidad, los datos personales y los derechos digitales. Además, se busca examinar los desafíos legales, éticos y sociales que enfrenta su implementación en un contexto global marcado por la constante tensión entre la seguridad y la vigilancia.
 		
 		Se pretende, a través de esta revisión, examinar el papel que desempeña el cifrado de extremo a extremo en la protección de las comunicaciones digitales, considerando tanto sus fundamentos técnicos como sus implicaciones en la privacidad y los derechos digitales. Asimismo, se busca identificar las principales aplicaciones que utilizan esta tecnología y analizar las distintas posturas presentes en la literatura académica respecto a sus beneficios, limitaciones y desafíos legales. Mediante esta exploración, se espera aportar una visión crítica y actualizada sobre el impacto del cifrado E2EE en un entorno digital cada vez más expuesto a riesgos de seguridad y vigilancia.
+		%=====================================================================
+		%			% METODOLOGIA
+		%=====================================================================
 		\section*{\normalsize METODOLOGIA}
 		
 		a presente revisión se llevó a cabo siguiendo un enfoque cualitativo de tipo documental, basado en la búsqueda, selección y análisis crítico de fuentes académicas y técnicas relacionadas con el cifrado de extremo a extremo (E2EE) en las comunicaciones digitales. El objetivo fue identificar, comparar y evaluar los principales aportes teóricos y prácticos disponibles en la literatura especializada, con énfasis en la seguridad de la información, la privacidad de los usuarios y los desafíos legales asociados a esta tecnología.
 		
 		\subsection*{\normalsize Búsqueda bibliográfica y criterios de selección }
-		La recolección de la información se realizó mediante una búsqueda sistemática en bases de datos académicas reconocidas, como Scopus, IEEE Xplore, ScienceDirect, Google Scholar y Redalyc, utilizando palabras clave como: “end-to-end encryption”, “digital privacy”, “data protection”, “cryptography”, “secure communications” y sus equivalentes en español. Se limitaron los resultados a publicaciones académicas, artículos científicos, informes técnicos y documentos institucionales publicados entre los años 2015 y 2024, para asegurar la actualidad y relevancia de la información.
+		La recolección de la información se realizó mediante una búsqueda sistemática en bases de datos académicas reconocidas, como Scopus, IEEE Xplore,arXiv entre otros , utilizando palabras clave como: “end-to-end encryption”, “digital privacy”, “data protection”, “cryptography”, “secure communications” y sus equivalentes en español. \textbf{Cuadro}~\ref{tab:busqueda}.
 		
 		Los criterios de inclusión contemplaron trabajos que abordaran aspectos técnicos del cifrado E2EE, sus aplicaciones en plataformas digitales, implicaciones legales, debates éticos y consideraciones en torno a los derechos digitales. Se excluyeron artículos puramente comerciales, sin revisión por pares, o que no profundizaran en el cifrado desde una perspectiva crítica o especializada.
 		
+		El proceso seguido para la identificación, selección y exclusión de artículos se resume en el flujograma presentado en la \textbf{Figura}~\ref{fig:flujograma}.
+		
+		
+		
 		\subsection*{\normalsize Fuentes documentales y recuperación de la información }
 		Las fuentes seleccionadas provienen mayoritariamente de revistas científicas indexadas, publicaciones de organismos especializados en seguridad informática y documentos académicos relevantes en el área de la criptografía y la protección de datos. La información fue organizada mediante matrices de análisis temático, lo cual permitió clasificar los artículos según sus principales enfoques (técnico, legal, ético, social) y contrastar sus aportes.
-		
 		\subsection*{\normalsize Evaluación de calidad, fiabilidad y validez }
-		Para garantizar la calidad de los documentos revisados, se consideró el factor de impacto de las revistas, la reputación de los autores, el nivel de citación de los artículos y la claridad metodológica en cada fuente. Se priorizaron publicaciones con revisión por pares, metodologías bien fundamentadas y resultados claramente argumentados. Asimismo, se evaluó la fiabilidad de los datos presentados y la validez interna de los argumentos, considerando su coherencia con otras investigaciones del área.
-		
-		\subsection*{\normalsize Análisis de la variabilidad y consistencia de las fuentes }
-		
-		Durante el análisis comparativo, se identificaron tanto puntos de convergencia como diferencias en la forma en que los autores abordan el cifrado de extremo a extremo. Esta variabilidad fue examinada en función del contexto de aplicación (por ejemplo, mensajería, correo electrónico, servicios en la nube) y de las perspectivas disciplinarias (tecnología, derecho, ética). A pesar de ciertas discrepancias, los hallazgos muestran una consistencia general en cuanto al valor del cifrado E2EE como mecanismo de protección y su relevancia creciente en la defensa de la privacidad digital.
+		Para asegurar la calidad de los documentos revisados, se tomó en cuenta diversos aspectos que permiten garantizar la confiabilidad y pertinencia de la información analizada. En primer lugar, se consideró el prestigio de las revistas donde fueron publicados los artículos, evaluando factores como el factor de impacto y el reconocimiento dentro de la comunidad académica. Además, se revisó la reputación de los autores, poniendo especial atención en su trayectoria y contribuciones previas al área de estudio. Otro aspecto fundamental fue la cantidad de veces que los artículos han sido citados, lo que da una idea de su relevancia y aceptación dentro del campo. También se examinó con detenimiento la claridad y solidez de las metodologías empleadas en cada fuente, priorizando aquellas que presentan procedimientos bien fundamentados y resultados transparentes. Finalmente, se evaluó la coherencia interna de los argumentos presentados, contrastando la información con otras investigaciones para asegurar que no existieran contradicciones o datos poco fiables. De esta manera, se buscó construir una base sólida de conocimiento que permita realizar un análisis riguroso y con fundamentos confiables, evitando así incluir información sesgada o poco pertinente.
 		
 	\end{multicols}
 	
+	
 	%=====================================================================
-			% FIN DE CONTENIDO EN DOS COLUMNAS
+	% FIN DE CONTENIDO EN DOS COLUMNAS
 	%=====================================================================
+			
+	\begin{figure}[ht]
+		\caption{ Flujograma de selección de artículos}
+		\vspace{0.5cm}
+		\label{fig:flujograma}
+		\centering
+		\begin{tikzpicture}[
+			node distance=1.1cm and 0.9cm,
+			every node/.style={draw, rounded corners, align=center, font=\scriptsize, text width=3.5cm, inner sep=4pt},
+			arrow/.style={-{Stealth}, thick}
+			]
+			
+			% Fuentes
+			\node (pubmed) {\textit{IEEexplore.}\\n = 15};
+			\node[right=of pubmed] (science) {arXiv.orgt\\n = 5};
+			\node[right=of science] (scopus) {Scopus\\n = 3};
+			
+			% Nodo central de total
+			\node[below=of science] (total) {Total de artículos\\n = 23};
+			
+			% Revisión
+			\node[below=of total] (revision) {Revisión de \textit{título} y \textit{resumen}};
+			
+			% Excluidos
+			\node[right=3.5cm of revision] (excluidos) {Artículos excluidos (\textbf{duplicados},\\ \textbf{sin acceso a texto completo},\\ \textbf{no relevantes})\\n = 15};
+			
+			% Incluidos
+			\node[below=of revision] (incluidos) {Artículos incluidos en la\\ revisión de tema \textit{general}\\n = 8};
+			
+			% Flechas
+			\draw[arrow] (pubmed) -- (total);
+			\draw[arrow] (science) -- (total);
+			\draw[arrow] (scopus) -- (total);
+			\draw[arrow] (total) -- (revision);
+			\draw[arrow] (revision) -- (incluidos);
+			\draw[arrow] (revision) -- (excluidos);
+			
+		\end{tikzpicture}
+	\end{figure}
+	
+	\begin{table}[ht]
+		\centering
+		\caption{Bases de datos y términos de búsqueda empleados para la revisión sobre cifrado de extremo a extremo}
+		\label{tab:busqueda}
+		\vspace{0.5cm}
+		\begin{tabularx}{\textwidth}{l X}
+			\hline
+			\textbf{Base de datos} & \textbf{Términos de búsqueda} \\
+			\hline
+			Scopus & “end-to-end encryption”, “digital privacy”, “data protection”, “cryptography”, “secure communications” \\
+			\hline
+			IEEE Xplore & “end-to-end encryption”, “information security”, “secure messaging”, “data confidentiality”, “privacy protection” \\
+			\hline
+			arXiv & “end-to-end encryption”, “cryptography”, “privacy”, “digital security”, “secure communication protocols” \\
+			\hline
+		\end{tabularx}
+	\end{table}
 	
 	
+		
+	\begin{multicols}{2}
+		
+		\subsection*{\normalsize Análisis de la variabilidad y consistencia de las fuentes }
+		
+		Al realizar el análisis comparativo de las diferentes fuentes consultadas, se observó que existen tanto puntos en común como diferencias en la manera en que los distintos autores abordan el tema del cifrado de extremo a extremo. Estas diferencias y semejanzas se analizaron tomando en cuenta los distintos contextos en los que se aplica esta tecnología, tales como la mensajería instantánea, el correo electrónico y los servicios en la nube. Además, se consideraron las perspectivas desde las cuales se examina el tema, incluyendo aspectos técnicos, legales y éticos. A pesar de que algunos trabajos muestran enfoques y énfasis distintos, la mayoría coincide en valorar el cifrado E2EE como una herramienta esencial para proteger la información frente a accesos no autorizados. En general, los hallazgos reflejan una tendencia clara hacia el reconocimiento del cifrado de extremo a extremo como un mecanismo clave para la defensa de la privacidad y la seguridad digital, subrayando su importancia creciente en un mundo cada vez más conectado y vulnerable a diversas amenazas. Esta consistencia, a pesar de la diversidad de enfoques, contribuye a fortalecer la confianza en el uso del cifrado como medida de protección indispensable.
+	\end{multicols}
+		
+		
 	\printbibliography
 	
 \end{document}
