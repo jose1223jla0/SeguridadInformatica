@@ -10,7 +10,8 @@
 \usepackage[backend=biber,style=apa]{biblatex}
 \addbibresource{referencias.bib}
 \usepackage{tabularx}
-
+\usepackage{mathptmx} 
+\usepackage{hyperref}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
 
@@ -33,6 +34,7 @@
 		thick,->,>=stealth
 	}
 }
+
 
 \begin{document}
 	
@@ -194,8 +196,12 @@
 		
 		Al realizar el análisis comparativo de las diferentes fuentes consultadas, se observó que existen tanto puntos en común como diferencias en la manera en que los distintos autores abordan el tema del cifrado de extremo a extremo. Estas diferencias y semejanzas se analizaron tomando en cuenta los distintos contextos en los que se aplica esta tecnología, tales como la mensajería instantánea, el correo electrónico y los servicios en la nube. Además, se consideraron las perspectivas desde las cuales se examina el tema, incluyendo aspectos técnicos, legales y éticos. A pesar de que algunos trabajos muestran enfoques y énfasis distintos, la mayoría coincide en valorar el cifrado E2EE como una herramienta esencial para proteger la información frente a accesos no autorizados. En general, los hallazgos reflejan una tendencia clara hacia el reconocimiento del cifrado de extremo a extremo como un mecanismo clave para la defensa de la privacidad y la seguridad digital, subrayando su importancia creciente en un mundo cada vez más conectado y vulnerable a diversas amenazas. Esta consistencia, a pesar de la diversidad de enfoques, contribuye a fortalecer la confianza en el uso del cifrado como medida de protección indispensable.
 	\end{multicols}
-		
-		
-	\printbibliography
+	%=====================================================================
+	% 				PARA REFERENCIAS
+	%=====================================================================
+	\begin{multicols}{2}
+		\printbibliography
+	\end{multicols}
+	
 	
 \end{document}
