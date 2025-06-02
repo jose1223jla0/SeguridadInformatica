@@ -51,6 +51,12 @@
       \field{labeltitlesource}{title}
       \field{title}{Métodos de investigación cualitativa}
       \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.ejemplo.com/libro/metodos-investigacion-cualitativa
+      \endverb
+      \verb{url}
+      \verb https://www.ejemplo.com/libro/metodos-investigacion-cualitativa
+      \endverb
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
@@ -86,6 +92,12 @@
       \field{labeltitlesource}{title}
       \field{title}{Métodos de investigación cualitativa}
       \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.ejemplo.com/libro/metodos-investigacion-cualitativa
+      \endverb
+      \verb{url}
+      \verb https://www.ejemplo.com/libro/metodos-investigacion-cualitativa
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
