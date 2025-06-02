@@ -5,7 +5,8 @@ Seguridad informática
 .pdf
 .gz
 estos se generan automaticamente
-%% Agregar las citas:%%
+
+Agregar las citas:
 pdflatex Seguridad.tex      
 biber Seguridad
 pdflatex Seguridad.tex
