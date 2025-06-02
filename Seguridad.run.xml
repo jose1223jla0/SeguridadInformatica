@@ -41,7 +41,7 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="0">
+  <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
       <file>Seguridad.bcf</file>
@@ -58,11 +58,9 @@
       <file>apa.bbx</file>
       <file>apa.cbx</file>
       <file>biblatex.cfg</file>
-      <file>spanish.lbx</file>
-      <file>spanish-apa.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="0">
+  <external package="biblatex" priority="5" active="1">
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>

@@ -1,4 +1,6 @@
 \documentclass[spanish,12pt,a4paper]{article}
+\usepackage[spanish]{babel}
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
@@ -10,10 +12,22 @@
 \usepackage[backend=biber,style=apa]{biblatex}
 \addbibresource{referencias.bib}
 \usepackage{tabularx}
-
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}  % <- esto es importante
+\usepackage{geometry}
+\usepackage{enumitem}
+% graficos mapa
+\geometry{margin=1in}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning}
-
+\tikzset{
+	concept/.style={circle, draw, fill=blue!20, text width=3.5cm, align=center, minimum height=1.2cm, font=\small, inner sep=3pt},
+	subconcept/.style={rectangle, draw, fill=green!15, text width=3.5cm, align=left, minimum height=1cm, font=\footnotesize, inner sep=3pt},
+	arrow/.style={thick,->,>=stealth}
+}
 \tikzstyle{box} = [rectangle, rounded corners, minimum width=8cm, minimum height=1cm,text centered, draw=black, fill=blue!20]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
@@ -22,7 +36,7 @@
 
 \tikzset{
 	box/.style={
-		rectangle, rounded corners, minimum width=5.5cm, minimum height=1cm,
+		rectangle, rounded corners, minimum width=3.5cm, minimum height=1cm,
 		text centered, draw=black, fill=blue!20
 	},
 	smallbox/.style={
@@ -194,8 +208,155 @@
 		
 		Al realizar el análisis comparativo de las diferentes fuentes consultadas, se observó que existen tanto puntos en común como diferencias en la manera en que los distintos autores abordan el tema del cifrado de extremo a extremo. Estas diferencias y semejanzas se analizaron tomando en cuenta los distintos contextos en los que se aplica esta tecnología, tales como la mensajería instantánea, el correo electrónico y los servicios en la nube. Además, se consideraron las perspectivas desde las cuales se examina el tema, incluyendo aspectos técnicos, legales y éticos. A pesar de que algunos trabajos muestran enfoques y énfasis distintos, la mayoría coincide en valorar el cifrado E2EE como una herramienta esencial para proteger la información frente a accesos no autorizados. En general, los hallazgos reflejan una tendencia clara hacia el reconocimiento del cifrado de extremo a extremo como un mecanismo clave para la defensa de la privacidad y la seguridad digital, subrayando su importancia creciente en un mundo cada vez más conectado y vulnerable a diversas amenazas. Esta consistencia, a pesar de la diversidad de enfoques, contribuye a fortalecer la confianza en el uso del cifrado como medida de protección indispensable.
 	\end{multicols}
-		
-		
+		\section*{\normalsize Desarrollo y Discución }
+		\begin{multicols}{2}
+		El cifrado de extremo a extremo (E2EE) se ha consolidado como una herramienta fundamental para proteger nuestras comunicaciones digitales. Cuando enviamos un mensaje o realizamos una transacción en línea, esta tecnología garantiza que únicamente nosotros y el destinatario podamos acceder al contenido, funcionando como un sistema de seguridad que codifica la información durante todo su recorrido.
+		La revisión sistemática de la literatura en Scopus reveló una distribución heterogénea de investigaciones sobre cifrado de extremo a extremo (E2EE) entre 2022-2024. Los estudios analizados se agruparon en tres categorías principales según su enfoque de aplicación:
+	\end{multicols}
+	\subsection*{\normalsize Distribución por sector de aplicación:}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				xbar,
+				width=8cm,
+				height=5cm,
+				xlabel={Porcentaje de publicaciones},
+				symbolic y coords={
+					Servicios financieros y transacciones digitales,
+					Sistemas de comunicación y redes sociales,
+					Internet de las Cosas y dispositivos conectados
+				},
+				ytick=data,
+				nodes near coords,
+				xmin=0,
+				xmax=50,
+				enlarge y limits=0.2,
+				bar width=12pt,
+				xtick={0,10,20,30,40,50},
+				xlabel style={font=\bfseries},
+				yticklabel style={text width=9cm, align=right}
+				]
+				\addplot coordinates {
+					(45,Internet de las Cosas y dispositivos conectados)
+					(32,Sistemas de comunicación y redes sociales)
+					(23,Servicios financieros y transacciones digitales)
+				};
+			\end{axis}
+		\end{tikzpicture}
+	\end{figure}
+	\begin{itemize}
+		\item Internet de las Cosas y dispositivos conectados
+		\item Sistemas de comunicación y redes sociales
+		\item Servicios financieros y transacciones digitales
+	\end{itemize}
+	
+	La metodología empleada para la organización de datos siguió el protocolo PRISMA, permitiendo una categorización sistemática que facilitó la identificación de patrones emergentes y brechas en la investigación actual.
+	\subsubsection*{Aplicación del Protocolo PRISMA}
+	
+	La organización y análisis de los datos se realizó siguiendo el protocolo PRISMA, el cual consta de cuatro fases principales:
+	
+	\begin{itemize}
+		\item \textbf{Identificación}: Se realizó una búsqueda sistemática en bases de datos académicas (Scopus, IEEE Xplore y ScienceDirect) utilizando términos relacionados con “cifrado de extremo a extremo”, “seguridad digital” y “comunicaciones seguras”.
+		\item \textbf{Cribado}: Se aplicaron criterios de inclusión y exclusión para filtrar los registros relevantes. Se eliminaron duplicados y se evaluaron los títulos y resúmenes.
+		\item \textbf{Elegibilidad}: Los artículos seleccionados fueron leídos en su totalidad para determinar su relevancia metodológica y temática.
+		\item \textbf{Inclusión}: Se incluyeron en la síntesis final aquellos estudios que cumplían con los requisitos de calidad y pertinencia.
+	\end{itemize}
+	\subsubsection*{Mapa Mental}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[node distance=1.5cm and 1cm]
+			
+			% Nodo central
+			\node[concept] (central) {Cifrado de Extremo a Extremo};
+			
+			% Rama 1 - Aplicaciones Tecnológicas (arriba a la derecha)
+			\node[subconcept, above right=of central] (app1) {IoT y dispositivos inteligentes \\ \textit{(Lin et al., 2024)}};
+			\node[subconcept, right=of app1] (app2) {Sistemas de publicación-suscripción};
+			\node[subconcept, below=of app1] (app3) {Arquitecturas de re-cifrado proxy};
+			
+			% Rama 2 - Implicaciones Sociales (abajo a la izquierda)
+			\node[subconcept, below left=of central] (soc1) {Privacidad vs. seguridad pública};
+			\node[subconcept, left=of soc1] (soc2) {Investigación criminal y forense digital};
+			\node[subconcept, below=of soc1] (soc3) {Marcos regulatorios emergentes};
+			
+			% Rama 3 - Implementación Práctica (arriba a la izquierda)
+			\node[subconcept, above left=of central] (imp1) {Sistemas de pago digital};
+			\node[subconcept, left=of imp1] (imp2) {Protocolos de autenticación};
+			\node[subconcept, below=of imp1] (imp3) {Estándares de cumplimiento normativo};
+			
+			% Conexiones
+			\draw[arrow] (central) -- (app1);
+			\draw[arrow] (central) -- (app2);
+			\draw[arrow] (central) -- (app3);
+			
+			\draw[arrow] (central) -- (soc1);
+			\draw[arrow] (central) -- (soc2);
+			\draw[arrow] (central) -- (soc3);
+			
+			\draw[arrow] (central) -- (imp1);
+			\draw[arrow] (central) -- (imp2);
+			\draw[arrow] (central) -- (imp3);
+			
+		\end{tikzpicture}
+		\caption{Mapa mental de enfoques del cifrado de extremo a extremo (E2EE)}
+	\end{figure}
+	\subsection*{Combinación de los Resultados de Diferentes Artículos}
+	\begin{multicols}{2}
+	\paragraph{Convergencias Identificadas.} 
+	Los estudios analizados coinciden en varios aspectos fundamentales. La investigación de \textit{Lin et al.} (2024) sobre \textit{Internet de las Cosas (IoT)} complementa los hallazgos de estudios previos sobre eficiencia energética en dispositivos con recursos limitados. Paralelamente, los análisis de la Universidad de Johannesburgo sobre el impacto del \textit{cifrado de extremo a extremo (E2EE)} en investigaciones criminales encuentran eco en múltiples publicaciones que abordan el equilibrio entre privacidad y seguridad.
+	
+	\begin{itemize}
+		\item Necesidad de optimización para dispositivos con limitaciones de procesamiento.
+		\item Tensión constante entre privacidad individual y necesidades de seguridad colectiva.
+		\item Evolución acelerada de marcos regulatorios internacionales.
+		\item Incremento en costos de implementación versus beneficios de seguridad.
+	\end{itemize}
+	
+	\paragraph{Divergencias y Enfoques Complementarios.} 
+	Mientras algunos estudios priorizan la eficiencia técnica del cifrado, otros se enfocan en las implicaciones éticas y legales. Esta diversidad de perspectivas enriquece el panorama investigativo, aunque también revela la necesidad de una mayor integración interdisciplinaria.
+	\end{multicols}
+	\subsection*{Argumentación Crítica de los Resultados}
+	\begin{multicols}{2}
+	
+	\paragraph{Análisis de Diseños Metodológicos.}
+	
+	\textbf{Fortalezas identificadas:} La investigación de \textit{Lin et al.} (2024) presenta un diseño experimental robusto con implementación práctica en entornos controlados.\\ Su enfoque en \textit{re-cifrado proxy condicional} aporta una solución innovadora que ha sido validada empíricamente, demostrando reducciones significativas en consumo energético.
+	
+	\textbf{Limitaciones metodológicas detectadas:} Sin embargo, varios estudios presentan limitaciones notables. Los análisis sobre el impacto del E2EE en la investigación criminal se basan principalmente en datos retrospectivos, lo cual puede introducir sesgos de selección. Además, muchas investigaciones sobre sistemas de pago se realizan en entornos simulados que no replican completamente las condiciones operativas reales.
+	
+	\paragraph{Identificación de Sesgos.}
+		\textbf{\\Sesgo de publicación:} La literatura muestra una tendencia hacia resultados positivos, con escasa documentación de implementaciones fallidas o parcialmente exitosas del E2EE.\\
+		\textbf{Sesgo geográfico:} La mayoría de estudios provienen de instituciones en países desarrollados, limitando la generalización de los resultados a contextos con diferentes marcos regulatorios y niveles de desarrollo tecnológico.\\
+		\textbf{Sesgo temporal:} La rápida evolución tecnológica puede hacer que algunos hallazgos pierdan relevancia en períodos relativamente cortos.
+
+	
+	\paragraph{Limitaciones Sistémicas.}
+	\begin{itemize}
+		\item \textbf{Complejidad interdisciplinaria:} Los estudios tienden a especializarse en aspectos técnicos o sociales, pero rara vez integran ambas perspectivas de manera comprehensiva.
+		\item \textbf{Escalabilidad:} Muchas propuestas muestran viabilidad en entornos controlados, pero presentan incertidumbres sobre su implementación a gran escala.
+		\item \textbf{Consideraciones económicas:} Existe una brecha entre la factibilidad técnica y la viabilidad económica, especialmente para organizaciones de menor tamaño.
+	\end{itemize}
+	\end{multicols}
+	\subsection*{Conclusiones Extraídas y Su Validez}
+		\begin{multicols}{2}
+	
+	\paragraph{Conclusiones sólidas respaldadas por evidencia.}
+	\begin{itemize}
+		\item El cifrado de extremo a extremo (E2EE) es técnicamente viable para dispositivos \textit{IoT}, siempre que se apliquen optimizaciones apropiadas.
+		\item Existe un impacto medible en los procedimientos de investigación criminal, evidenciado por estudios de caso y revisiones institucionales.
+		\item Los costos de implementación del E2EE varían significativamente según el sector de aplicación, influidos por factores como escalabilidad, regulación y capacidad tecnológica.
+	\end{itemize}
+	
+	\paragraph{Conclusiones que requieren mayor investigación.}
+	\begin{itemize}
+		\item El equilibrio óptimo entre privacidad individual y seguridad pública sigue sin resolverse, debido a tensiones éticas, legales y técnicas.
+		\item La interoperabilidad entre diferentes sistemas y protocolos de E2EE presenta desafíos aún no completamente abordados por la literatura.
+		\item Los efectos a largo plazo derivados de la adopción masiva del E2EE requieren estudios longitudinales más extensos y comparativos entre regiones.
+	\end{itemize}
+		\end{multicols}
+	\section*{Referencias}
+	
 	\printbibliography
 	
 \end{document}
